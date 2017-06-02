@@ -18,4 +18,8 @@ The reason that not every home use smart components has - at least in my opinion
 
 
 # System Overview
+The environment of a Smart Home is distributed by its nature, you have several rooms containing multiple sensors and actuators. To connect them a centralized server application was chosen which dramastically simplifies things: It simplifies the interconnectivity between devices because you have to implement less protocols for each device and it is a central place to store events (database). Furthermore, the maintenance is simplified because you only have to updates the server application. Thats what servers are good for, however, servers are not appropriate as an interface to the system since the lack fast remote access and portability. Therefore, de-central access is provided via smartphone and voice.
 ![alt text](https://github.com/voelkerb/iHouse/blob/master/docu/iHouseOverview.jpg)
+
+The overall flow of complete setup is shown below. The smartphone interface is enabled using a TCP connection. Off-the-shelf sensors and actuators which feature TCP interfaces can also be integrated easily. To allow the use of existing equipment like the lighting or gerneric devices with a power plug a TCP to RF Bridge modules is used which switches off-the-shelf power sockets (unexpensive). A TCP to infrared bridge is used to control any devices that is shipped with a remote control (TV, Hifi System, etc.).
+![alt text](https://github.com/voelkerb/iHouse/blob/master/docu/BasicSystem.jpg)
