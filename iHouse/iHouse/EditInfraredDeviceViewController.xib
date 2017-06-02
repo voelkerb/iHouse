@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A263e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8152.3"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EditInfraredDeviceViewController">
+            <connections>
+                <outlet property="hostLabel" destination="ytI-gB-AYx" id="Z93-fk-lQ5"/>
+                <outlet property="scrollView" destination="rn1-pw-wMQ" id="hTB-t7-jEN"/>
+                <outlet property="view" destination="4MX-Sj-BIJ" id="5Gd-ql-r0L"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="4MX-Sj-BIJ">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="289"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="Advanced Properties:" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="JIP-ih-r86">
+                    <rect key="frame" x="17" y="-4" width="432" height="285"/>
+                    <view key="contentView" id="8as-e2-QSJ">
+                        <rect key="frame" x="1" y="1" width="430" height="269"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ytI-gB-AYx">
+                                <rect key="frame" x="120" y="234" width="31" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="host" id="eKR-4Y-1s3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cte-lV-95Y">
+                                <rect key="frame" x="163" y="223" width="85" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="change" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obK-oS-Xpw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="changeHost:" target="-2" id="Gjp-1h-Kn1"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4tL-ha-MAX">
+                                <rect key="frame" x="18" y="234" width="86" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Current Host:" id="cg6-xU-F5J">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qM2-Mv-reh">
+                                <rect key="frame" x="18" y="205" width="82" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Edit Remote:" id="rZK-N6-PjG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-pw-wMQ">
+                                <rect key="frame" x="120" y="50" width="180" height="170"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Eog-JK-bkI">
+                                    <rect key="frame" x="1" y="1" width="178" height="168"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snp-2d-b9B">
+                                            <rect key="frame" x="-56" y="-230" width="170" height="30"/>
+                                            <animations/>
+                                        </view>
+                                    </subviews>
+                                    <animations/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="N2V-yO-8ib"/>
+                                </constraints>
+                                <animations/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="ISE-P9-hTN">
+                                    <rect key="frame" x="1" y="153" width="178" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7zs-K8-cUg">
+                                    <rect key="frame" x="163" y="1" width="16" height="168"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-WF-2c5">
+                                <rect key="frame" x="270" y="19" width="30" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rhv-S9-Cfh"/>
+                                    <constraint firstAttribute="width" constant="30" id="SRb-JK-u3B"/>
+                                </constraints>
+                                <animations/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="y2v-G1-rJE">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addIRCommand:" target="-2" id="dZo-QE-BjE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qf7-WF-2c5" firstAttribute="top" secondItem="rn1-pw-wMQ" secondAttribute="bottom" id="2vg-u0-rih"/>
+                            <constraint firstItem="rn1-pw-wMQ" firstAttribute="leading" secondItem="8as-e2-QSJ" secondAttribute="leading" constant="120" id="5Fu-pV-zdf"/>
+                            <constraint firstItem="rn1-pw-wMQ" firstAttribute="top" secondItem="cte-lV-95Y" secondAttribute="bottom" constant="10" id="BQh-bY-LRT"/>
+                            <constraint firstItem="ytI-gB-AYx" firstAttribute="leading" secondItem="4tL-ha-MAX" secondAttribute="trailing" constant="20" id="FzY-Y8-Vus"/>
+                            <constraint firstItem="4tL-ha-MAX" firstAttribute="leading" secondItem="8as-e2-QSJ" secondAttribute="leading" constant="20" symbolic="YES" id="HR2-Is-i8G"/>
+                            <constraint firstItem="ytI-gB-AYx" firstAttribute="top" secondItem="8as-e2-QSJ" secondAttribute="top" constant="18" id="L0D-kE-lJE"/>
+                            <constraint firstItem="4tL-ha-MAX" firstAttribute="top" secondItem="8as-e2-QSJ" secondAttribute="top" constant="18" id="LjX-i5-mjd"/>
+                            <constraint firstItem="qf7-WF-2c5" firstAttribute="top" secondItem="rn1-pw-wMQ" secondAttribute="bottom" id="QSS-Jf-unR"/>
+                            <constraint firstItem="cte-lV-95Y" firstAttribute="top" secondItem="8as-e2-QSJ" secondAttribute="top" constant="18" id="R24-Wf-ojU"/>
+                            <constraint firstAttribute="bottom" secondItem="qf7-WF-2c5" secondAttribute="bottom" constant="20" id="ebw-aP-0K4"/>
+                            <constraint firstItem="qf7-WF-2c5" firstAttribute="leading" secondItem="8as-e2-QSJ" secondAttribute="leading" constant="270" id="gYI-bv-Jk5"/>
+                            <constraint firstItem="cte-lV-95Y" firstAttribute="leading" secondItem="ytI-gB-AYx" secondAttribute="trailing" constant="20" id="wsr-J5-6FX"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="JIP-ih-r86" firstAttribute="leading" secondItem="4MX-Sj-BIJ" secondAttribute="leading" constant="20" id="4Cq-LW-XyG"/>
+                <constraint firstAttribute="trailing" secondItem="JIP-ih-r86" secondAttribute="trailing" constant="20" id="ce1-7i-V7m"/>
+                <constraint firstItem="JIP-ih-r86" firstAttribute="top" secondItem="4MX-Sj-BIJ" secondAttribute="top" constant="8" id="elE-lb-4Vm"/>
+                <constraint firstAttribute="bottom" secondItem="JIP-ih-r86" secondAttribute="bottom" id="y7U-3F-rJc"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="457" y="176.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
+</document>

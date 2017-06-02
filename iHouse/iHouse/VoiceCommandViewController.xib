@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A244d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8152.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="VoiceCommandViewController">
+            <connections>
+                <outlet property="responseScrollView" destination="Cr4-Wv-t6L" id="Dxv-B6-Ryb"/>
+                <outlet property="sinusWaveView" destination="4vz-jE-6Jc" id="ZPb-qn-YMH"/>
+                <outlet property="view" destination="VTU-VP-fP8" id="F1y-YA-W1Y"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="VTU-VP-fP8">
+            <rect key="frame" x="0.0" y="0.0" width="861" height="388"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="4vz-jE-6Jc" customClass="SinusWaveView">
+                    <rect key="frame" x="0.0" y="30" width="861" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Dhk-Lo-loy"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Ztc-o1-POA"/>
+                    </constraints>
+                    <animations/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="density">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="waves">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="marginLeft">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="marginRight">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ped-Ho-M0N">
+                    <rect key="frame" x="837" y="364" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="2Ry-hh-eHt"/>
+                        <constraint firstAttribute="height" constant="24" id="B78-V5-dpP"/>
+                        <constraint firstAttribute="width" secondItem="ped-Ho-M0N" secondAttribute="height" multiplier="1:1" id="psN-fy-kSC"/>
+                    </constraints>
+                    <animations/>
+                    <buttonCell key="cell" type="bevel" title="╳" alternateTitle="╳" bezelStyle="rounded" alignment="center" inset="2" id="mma-Zw-LJh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system" size="14"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="closeDictationWindow:" target="-2" id="Eae-lj-ldz"/>
+                    </connections>
+                </button>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr4-Wv-t6L">
+                    <rect key="frame" x="20" y="180" width="821" height="188"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="gWk-rq-i9h">
+                        <rect key="frame" x="1" y="1" width="819" height="186"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNw-QN-DwH">
+                                <rect key="frame" x="26" y="158" width="80" height="191"/>
+                                <animations/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                    </clipView>
+                    <animations/>
+                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xr1-mO-raZ">
+                        <rect key="frame" x="1" y="171" width="819" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </scroller>
+                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.59999999999999998" horizontal="NO" id="rka-g9-5dt">
+                        <rect key="frame" x="805" y="1" width="15" height="186"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4vz-jE-6Jc" secondAttribute="trailing" id="4jC-2M-a13"/>
+                <constraint firstItem="4vz-jE-6Jc" firstAttribute="top" secondItem="Cr4-Wv-t6L" secondAttribute="bottom" id="C4M-Bm-TCT"/>
+                <constraint firstItem="4vz-jE-6Jc" firstAttribute="leading" secondItem="VTU-VP-fP8" secondAttribute="leading" id="T1o-rE-azG"/>
+                <constraint firstAttribute="trailing" secondItem="ped-Ho-M0N" secondAttribute="trailing" id="Ujv-cH-vdZ"/>
+                <constraint firstItem="ped-Ho-M0N" firstAttribute="top" secondItem="VTU-VP-fP8" secondAttribute="top" id="Y8Z-8P-M8o"/>
+                <constraint firstItem="Cr4-Wv-t6L" firstAttribute="leading" secondItem="VTU-VP-fP8" secondAttribute="leading" constant="20" id="bqv-6U-ICy"/>
+                <constraint firstAttribute="bottom" secondItem="4vz-jE-6Jc" secondAttribute="bottom" constant="30" id="hGl-c4-lVY"/>
+                <constraint firstItem="Cr4-Wv-t6L" firstAttribute="top" secondItem="VTU-VP-fP8" secondAttribute="top" constant="20" id="iw0-aJ-uth"/>
+                <constraint firstAttribute="trailing" secondItem="Cr4-Wv-t6L" secondAttribute="trailing" constant="20" id="qCn-mp-cA4"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="510.5" y="-138"/>
+        </visualEffectView>
+        <textField verticalHuggingPriority="750" id="fhE-e1-sIZ">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="22"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <animations/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="wt2-KA-pn3">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+            <point key="canvasLocation" x="512" y="445"/>
+        </textField>
+    </objects>
+</document>

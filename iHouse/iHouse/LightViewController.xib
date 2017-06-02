@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A270f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11129.15"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LightViewController">
+            <connections>
+                <outlet property="backView" destination="Hz6-mo-xeY" id="fhW-qB-W0B"/>
+                <outlet property="lightImage" destination="l4p-pe-Nyr" id="3js-m6-Ehy"/>
+                <outlet property="lightName" destination="c63-do-qVT" id="Epj-OV-wtp"/>
+                <outlet property="switchButton" destination="2ER-IU-2KN" id="J5g-Sf-BrQ"/>
+                <outlet property="view" destination="7wi-S7-LZd" id="hVL-Xg-r2B"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="7wi-S7-LZd">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uj-sY-ugH">
+                            <rect key="frame" x="0.0" y="-22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="a6N-qD-Fdp"/>
+                        </imageView>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l4p-pe-Nyr" customClass="DragDropImageView">
+                            <rect key="frame" x="8" y="68" width="134" height="134"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="l4p-pe-Nyr" secondAttribute="height" multiplier="1:1" id="pqy-UG-SwC"/>
+                            </constraints>
+                            <imageCell key="cell" continuous="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="G5Y-4G-eXJ"/>
+                        </imageView>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="kPh-Sl-3Em" customClass="OnOffSwitchControl">
+                            <rect key="frame" x="6" y="6" width="138" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Mac-TO-J12"/>
+                            </constraints>
+                            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2ER-IU-2KN" customClass="OnOffSwitchControlCell">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleLight:" target="-2" id="6bo-gK-J8j"/>
+                            </connections>
+                        </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c63-do-qVT">
+                            <rect key="frame" x="8" y="210" width="134" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="LightView" drawsBackground="YES" id="8qH-ch-hWr">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="kPh-Sl-3Em" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="8ts-to-KOC"/>
+                        <constraint firstAttribute="trailing" secondItem="l4p-pe-Nyr" secondAttribute="trailing" constant="8" id="9qn-lY-G9A"/>
+                        <constraint firstItem="l4p-pe-Nyr" firstAttribute="top" secondItem="c63-do-qVT" secondAttribute="bottom" constant="8" id="Aev-ZD-fA4"/>
+                        <constraint firstItem="c63-do-qVT" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="BuI-Wz-ysg"/>
+                        <constraint firstAttribute="trailing" secondItem="kPh-Sl-3Em" secondAttribute="trailing" constant="8" id="DVV-gm-6zR"/>
+                        <constraint firstItem="l4p-pe-Nyr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="ExH-YO-jwd"/>
+                        <constraint firstItem="c63-do-qVT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="Fc8-Eo-aOn"/>
+                        <constraint firstAttribute="trailing" secondItem="c63-do-qVT" secondAttribute="trailing" constant="8" id="G02-Cs-uZj"/>
+                        <constraint firstAttribute="bottom" secondItem="kPh-Sl-3Em" secondAttribute="bottom" constant="8" id="Pry-4S-viv"/>
+                        <constraint firstItem="kPh-Sl-3Em" firstAttribute="top" secondItem="l4p-pe-Nyr" secondAttribute="bottom" constant="20" id="Qfr-Fq-nQQ"/>
+                        <constraint firstItem="kPh-Sl-3Em" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="SLz-Eu-Zbh"/>
+                        <constraint firstAttribute="trailing" secondItem="kPh-Sl-3Em" secondAttribute="trailing" constant="8" id="cqy-GF-veX"/>
+                        <constraint firstAttribute="trailing" secondItem="l4p-pe-Nyr" secondAttribute="trailing" constant="8" id="iUu-GN-p0A"/>
+                        <constraint firstItem="l4p-pe-Nyr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="mx7-cC-igk"/>
+                        <constraint firstAttribute="bottom" secondItem="kPh-Sl-3Em" secondAttribute="bottom" constant="8" id="siR-Ml-3YT"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Hz6-mo-xeY" secondAttribute="bottom" id="Gik-4A-cxo"/>
+                <constraint firstItem="Hz6-mo-xeY" firstAttribute="leading" secondItem="7wi-S7-LZd" secondAttribute="leading" id="N68-cG-BJ2"/>
+                <constraint firstItem="Hz6-mo-xeY" firstAttribute="top" secondItem="7wi-S7-LZd" secondAttribute="top" id="aby-N1-lxz"/>
+                <constraint firstAttribute="trailing" secondItem="Hz6-mo-xeY" secondAttribute="trailing" id="it0-Uc-2bY"/>
+            </constraints>
+            <point key="canvasLocation" x="529" y="450.5"/>
+        </visualEffectView>
+    </objects>
+</document>

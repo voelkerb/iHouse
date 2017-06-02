@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferenceWindowController">
+            <connections>
+                <outlet property="window" destination="RJF-Ra-vf2" id="fNB-22-StI"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="iHouse Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="RJF-Ra-vf2">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="950" height="500"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
+            <value key="minSize" type="size" width="950" height="500"/>
+            <view key="contentView" id="2h0-Gh-Vjp">
+                <rect key="frame" x="0.0" y="0.0" width="950" height="500"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="xdd-i1-mGe">
+                        <rect key="frame" x="0.0" y="0.0" width="950" height="425"/>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xdd-i1-mGe" firstAttribute="top" secondItem="2h0-Gh-Vjp" secondAttribute="top" constant="75" id="A39-5e-zBO"/>
+                    <constraint firstAttribute="bottom" secondItem="xdd-i1-mGe" secondAttribute="bottom" id="b0X-Ne-j9v"/>
+                    <constraint firstAttribute="trailing" secondItem="xdd-i1-mGe" secondAttribute="trailing" id="fad-m5-SHw"/>
+                    <constraint firstItem="xdd-i1-mGe" firstAttribute="leading" secondItem="2h0-Gh-Vjp" secondAttribute="leading" id="po0-jO-ycg"/>
+                    <constraint firstAttribute="trailing" secondItem="xdd-i1-mGe" secondAttribute="trailing" id="ynA-Q4-ay7"/>
+                </constraints>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="F59E527A-4AAC-46D1-9A0B-1D113C3DCC58" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="ggW-uq-QbF">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="sEf-O7-ihF"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="0NE-tp-zJ0"/>
+                    <toolbarItem implicitItemIdentifier="15BA4270-14AD-4293-BD8F-D8E55C81CB3C" label="HouseView" paletteLabel="HouseView" tag="1" image="houseBold_256" visibilityPriority="1" selectable="YES" id="gQX-4G-LRf">
+                        <connections>
+                            <action selector="changeView:" target="LEt-z6-3io" id="v4C-mX-FTb"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="F457C876-584B-4FB8-A750-BFF38981A730" label="VoiceCommands" paletteLabel="VoiceCommands" tag="2" image="voiceCommandMid_256" selectable="YES" id="bwL-Ak-Syi">
+                        <connections>
+                            <action selector="changeView:" target="LEt-z6-3io" id="M1Q-BU-P8Q"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6EB0F5B5-6870-400D-89F1-DF611E389256" label="DeviceList" paletteLabel="DeviceList" tag="3" image="devices_256" selectable="YES" id="76F-ol-nFw">
+                        <connections>
+                            <action selector="changeView:" target="LEt-z6-3io" id="fQT-Uo-Rt8"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="876CB3F0-7BC7-474D-A6F8-A187815DD9EE" label="Settings" paletteLabel="Settings" tag="4" image="preferences_256" selectable="YES" id="dr0-fb-3Ay">
+                        <connections>
+                            <action selector="changeView:" target="LEt-z6-3io" id="N53-T8-drJ"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="041772AE-F845-45BA-B034-174249EBA8A9" label="Rooms" paletteLabel="Rooms" tag="5" image="roomBold_256" selectable="YES" id="mdX-E6-beZ">
+                        <connections>
+                            <action selector="changeView:" target="LEt-z6-3io" id="Ewm-8I-U1d"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="CE120593-F7DF-453D-AAC5-EC78C3D97A2C" label="Groups" paletteLabel="Groups" tag="6" image="groups_256" selectable="YES" id="eoW-xh-oY3">
+                        <connections>
+                            <action selector="changeView:" target="LEt-z6-3io" id="qa5-p2-Rry"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="mdX-E6-beZ"/>
+                    <toolbarItem reference="sEf-O7-ihF"/>
+                    <toolbarItem reference="76F-ol-nFw"/>
+                    <toolbarItem reference="sEf-O7-ihF"/>
+                    <toolbarItem reference="bwL-Ak-Syi"/>
+                    <toolbarItem reference="sEf-O7-ihF"/>
+                    <toolbarItem reference="eoW-xh-oY3"/>
+                    <toolbarItem reference="0NE-tp-zJ0"/>
+                    <toolbarItem reference="dr0-fb-3Ay"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="Laz-Js-hsb"/>
+            </connections>
+            <point key="canvasLocation" x="667" y="435"/>
+        </window>
+        <customObject id="LEt-z6-3io" customClass="ToolBarViewSwitcher">
+            <connections>
+                <outlet property="completeView" destination="2h0-Gh-Vjp" id="hzV-qk-W27"/>
+                <outlet property="currentView" destination="xdd-i1-mGe" id="aaI-gp-eaE"/>
+                <outlet property="window" destination="RJF-Ra-vf2" id="cF3-Zb-MVn"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="devices_256" width="256" height="256"/>
+        <image name="groups_256" width="256" height="256"/>
+        <image name="houseBold_256" width="256" height="256"/>
+        <image name="preferences_256" width="256" height="256"/>
+        <image name="roomBold_256" width="256" height="256"/>
+        <image name="voiceCommandMid_256" width="256" height="256"/>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A263e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8152.3"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CalendarDayViewController">
+            <connections>
+                <outlet property="button" destination="bhe-4e-FtQ" id="PrT-mS-OCZ"/>
+                <outlet property="dayLabel" destination="K4B-Ir-gCP" id="QQ2-jl-Jzl"/>
+                <outlet property="dotLabel" destination="PD5-FH-tKj" id="wBM-Tp-TUC"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K4B-Ir-gCP">
+                    <rect key="frame" x="-2" y="21" width="100" height="23"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="day" id="kZZ-cS-h0d">
+                        <font key="font" size="16" name=".SFNSDisplay-Light"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-FH-tKj">
+                    <rect key="frame" x="-2" y="0.0" width="100" height="28"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="dot" id="GUH-nL-3tn">
+                        <font key="font" size="14" name=".SFNSDisplay-Light"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bhe-4e-FtQ">
+                    <rect key="frame" x="0.0" y="0.0" width="96" height="44"/>
+                    <animations/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="blank" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="6bw-aL-vys">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="dayPressed:" target="-2" id="9l0-vl-ZIx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bhe-4e-FtQ" secondAttribute="trailing" id="F0A-DR-6ni"/>
+                <constraint firstAttribute="bottom" secondItem="bhe-4e-FtQ" secondAttribute="bottom" id="Iv3-Ov-qsZ"/>
+                <constraint firstItem="bhe-4e-FtQ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="OKH-Dz-RqQ"/>
+                <constraint firstItem="K4B-Ir-gCP" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="RBf-Og-IbA"/>
+                <constraint firstItem="PD5-FH-tKj" firstAttribute="top" secondItem="K4B-Ir-gCP" secondAttribute="centerY" constant="5" id="Yze-me-yN1"/>
+                <constraint firstItem="K4B-Ir-gCP" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="cm0-N2-gwW"/>
+                <constraint firstItem="bhe-4e-FtQ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="eNK-rg-fFD"/>
+                <constraint firstItem="PD5-FH-tKj" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="kQa-nx-aY3"/>
+                <constraint firstAttribute="bottom" secondItem="PD5-FH-tKj" secondAttribute="bottom" id="qAt-Uu-ku7"/>
+                <constraint firstAttribute="trailing" secondItem="K4B-Ir-gCP" secondAttribute="trailing" id="sZs-Wr-6TB"/>
+                <constraint firstAttribute="trailing" secondItem="PD5-FH-tKj" secondAttribute="trailing" id="upf-oe-jWs"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="104" y="385"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="blank" width="96" height="84"/>
+    </resources>
+</document>

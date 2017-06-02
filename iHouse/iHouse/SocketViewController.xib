@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SocketViewController">
+            <connections>
+                <outlet property="backView" destination="de1-NH-Lq1" id="xAq-qx-A3V"/>
+                <outlet property="socketImage" destination="425-FS-qvc" id="rFH-YM-9ch"/>
+                <outlet property="socketName" destination="eRD-17-X5I" id="RbQ-z8-BG3"/>
+                <outlet property="switchButton" destination="Sj9-j7-iIg" id="U6f-fK-K65"/>
+                <outlet property="view" destination="vv4-jA-jBh" id="DpO-dm-vCx"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="vv4-jA-jBh">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="de1-NH-Lq1">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2q9-h0-4Zn">
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="jPc-GP-GmD"/>
+                        </imageView>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="425-FS-qvc" customClass="DragDropImageView">
+                            <rect key="frame" x="8" y="68" width="134" height="134"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="425-FS-qvc" secondAttribute="height" multiplier="1:1" id="dvF-jA-I6T"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="lse-Hu-iz0"/>
+                        </imageView>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="x6L-l1-bRN" customClass="OnOffSwitchControl">
+                            <rect key="frame" x="6" y="6" width="138" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="0Tf-m9-qt9"/>
+                            </constraints>
+                            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="Sj9-j7-iIg" customClass="OnOffSwitchControlCell">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleSocket:" target="-2" id="Spf-vO-bD2"/>
+                            </connections>
+                        </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eRD-17-X5I">
+                            <rect key="frame" x="8" y="210" width="134" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SocketView" drawsBackground="YES" id="5Il-jo-BrL">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="425-FS-qvc" secondAttribute="trailing" constant="8" id="1QQ-a1-jec"/>
+                        <constraint firstItem="425-FS-qvc" firstAttribute="leading" secondItem="de1-NH-Lq1" secondAttribute="leading" constant="8" id="3Pl-Wv-ItI"/>
+                        <constraint firstAttribute="bottom" secondItem="x6L-l1-bRN" secondAttribute="bottom" constant="8" id="4PT-Hs-aUD"/>
+                        <constraint firstItem="x6L-l1-bRN" firstAttribute="top" secondItem="425-FS-qvc" secondAttribute="bottom" constant="20" id="BYj-B8-Mdi"/>
+                        <constraint firstItem="425-FS-qvc" firstAttribute="leading" secondItem="de1-NH-Lq1" secondAttribute="leading" constant="8" id="CmI-In-Nxf"/>
+                        <constraint firstAttribute="trailing" secondItem="x6L-l1-bRN" secondAttribute="trailing" constant="8" id="LeW-O0-E8d"/>
+                        <constraint firstAttribute="trailing" secondItem="eRD-17-X5I" secondAttribute="trailing" constant="8" id="Mym-nF-793"/>
+                        <constraint firstItem="425-FS-qvc" firstAttribute="top" secondItem="eRD-17-X5I" secondAttribute="bottom" constant="8" id="VyW-y2-Ydx"/>
+                        <constraint firstAttribute="bottom" secondItem="x6L-l1-bRN" secondAttribute="bottom" constant="8" id="Xnl-ty-Xja"/>
+                        <constraint firstItem="eRD-17-X5I" firstAttribute="leading" secondItem="de1-NH-Lq1" secondAttribute="leading" constant="8" id="Y4i-Xw-XF7"/>
+                        <constraint firstItem="x6L-l1-bRN" firstAttribute="leading" secondItem="de1-NH-Lq1" secondAttribute="leading" constant="8" id="jcD-SI-1dS"/>
+                        <constraint firstAttribute="trailing" secondItem="x6L-l1-bRN" secondAttribute="trailing" constant="8" id="nBQ-dJ-6V9"/>
+                        <constraint firstAttribute="trailing" secondItem="425-FS-qvc" secondAttribute="trailing" constant="8" id="qnc-xw-w27"/>
+                        <constraint firstItem="x6L-l1-bRN" firstAttribute="leading" secondItem="de1-NH-Lq1" secondAttribute="leading" constant="8" id="uJM-CU-Byu"/>
+                        <constraint firstItem="eRD-17-X5I" firstAttribute="centerX" secondItem="de1-NH-Lq1" secondAttribute="centerX" id="uK2-CS-orZ"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="de1-NH-Lq1" firstAttribute="top" secondItem="vv4-jA-jBh" secondAttribute="top" id="MCU-qF-MwY"/>
+                <constraint firstAttribute="trailing" secondItem="de1-NH-Lq1" secondAttribute="trailing" id="ee4-jG-F51"/>
+                <constraint firstAttribute="bottom" secondItem="de1-NH-Lq1" secondAttribute="bottom" id="tFX-xp-qAR"/>
+                <constraint firstItem="de1-NH-Lq1" firstAttribute="leading" secondItem="vv4-jA-jBh" secondAttribute="leading" id="taT-B2-3xj"/>
+            </constraints>
+            <point key="canvasLocation" x="542" y="343"/>
+        </visualEffectView>
+    </objects>
+</document>

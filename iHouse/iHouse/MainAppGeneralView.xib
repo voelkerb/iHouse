@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainAppGeneralViewController">
+            <connections>
+                <outlet property="scrollView" destination="xWw-Od-pAZ" id="imM-Qn-FjK"/>
+                <outlet property="view" destination="FiO-IB-dWz" id="YGw-5g-601"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="FiO-IB-dWz">
+            <rect key="frame" x="0.0" y="0.0" width="720" height="512"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Cxj-Lv-JmX">
+                    <rect key="frame" x="0.0" y="0.0" width="720" height="512"/>
+                    <subviews>
+                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWw-Od-pAZ">
+                            <rect key="frame" x="0.0" y="0.0" width="720" height="512"/>
+                            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="U1D-aJ-3Yw">
+                                <rect key="frame" x="1" y="1" width="718" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opH-Vz-SRw">
+                                        <rect key="frame" x="159" y="-62" width="29" height="77"/>
+                                    </view>
+                                </subviews>
+                            </clipView>
+                            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="DbZ-MP-gpH">
+                                <rect key="frame" x="1" y="495" width="718" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fth-JJ-vlg">
+                                <rect key="frame" x="704" y="1" width="15" height="510"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xWw-Od-pAZ" firstAttribute="top" secondItem="Cxj-Lv-JmX" secondAttribute="top" id="76t-UI-vUs"/>
+                        <constraint firstAttribute="bottom" secondItem="xWw-Od-pAZ" secondAttribute="bottom" id="PTr-FD-CSV"/>
+                        <constraint firstItem="xWw-Od-pAZ" firstAttribute="leading" secondItem="Cxj-Lv-JmX" secondAttribute="leading" id="Qhs-KP-DaR"/>
+                        <constraint firstAttribute="trailing" secondItem="xWw-Od-pAZ" secondAttribute="trailing" id="wjb-3k-s90"/>
+                    </constraints>
+                </visualEffectView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cxj-Lv-JmX" secondAttribute="bottom" id="3im-3p-qoM"/>
+                <constraint firstAttribute="trailing" secondItem="Cxj-Lv-JmX" secondAttribute="trailing" id="8UF-BZ-9Vu"/>
+                <constraint firstItem="Cxj-Lv-JmX" firstAttribute="top" secondItem="FiO-IB-dWz" secondAttribute="top" id="9da-4G-18A"/>
+                <constraint firstItem="Cxj-Lv-JmX" firstAttribute="leading" secondItem="FiO-IB-dWz" secondAttribute="leading" id="x2d-2r-Bsk"/>
+            </constraints>
+            <point key="canvasLocation" x="947" y="569"/>
+        </customView>
+    </objects>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EditMicrophoneViewController">
+            <connections>
+                <outlet property="hostLabel" destination="50C-P5-ytL" id="Dzt-b0-etD"/>
+                <outlet property="view" destination="GUZ-XE-7lU" id="KNV-OC-KzW"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="GUZ-XE-7lU">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="Advanced Properties:" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-yL-lZw">
+                    <rect key="frame" x="17" y="-4" width="432" height="89"/>
+                    <view key="contentView" id="3C1-LB-bQA">
+                        <rect key="frame" x="1" y="1" width="430" height="73"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="50C-P5-ytL">
+                                <rect key="frame" x="105" y="38" width="31" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="host" id="Ubn-90-6Wn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jhR-Cx-bxR">
+                                <rect key="frame" x="148" y="27" width="85" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="change" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gUF-bG-0Cs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="changeMicroID:" target="-2" id="QZP-5u-PlV"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lJ8-Hc-aJb">
+                                <rect key="frame" x="18" y="38" width="71" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Current ID:" id="LYs-c7-sHe">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="50C-P5-ytL" firstAttribute="top" secondItem="3C1-LB-bQA" secondAttribute="top" constant="18" id="1Tb-Kv-O5l"/>
+                            <constraint firstItem="lJ8-Hc-aJb" firstAttribute="leading" secondItem="3C1-LB-bQA" secondAttribute="leading" constant="20" symbolic="YES" id="OXi-9Z-Vog"/>
+                            <constraint firstItem="50C-P5-ytL" firstAttribute="leading" secondItem="lJ8-Hc-aJb" secondAttribute="trailing" constant="20" id="PGn-Yv-zAU"/>
+                            <constraint firstItem="jhR-Cx-bxR" firstAttribute="leading" secondItem="50C-P5-ytL" secondAttribute="trailing" constant="20" id="ihh-Fv-NBP"/>
+                            <constraint firstItem="jhR-Cx-bxR" firstAttribute="top" secondItem="3C1-LB-bQA" secondAttribute="top" constant="18" id="kAX-Pa-pkU"/>
+                            <constraint firstItem="lJ8-Hc-aJb" firstAttribute="top" secondItem="3C1-LB-bQA" secondAttribute="top" constant="18" id="ucn-lo-cL5"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0c6-yL-lZw" secondAttribute="bottom" id="0hZ-q0-orz"/>
+                <constraint firstAttribute="trailing" secondItem="0c6-yL-lZw" secondAttribute="trailing" constant="20" id="GLn-r3-iRQ"/>
+                <constraint firstItem="0c6-yL-lZw" firstAttribute="leading" secondItem="GUZ-XE-7lU" secondAttribute="leading" constant="20" id="HME-xf-pt5"/>
+                <constraint firstItem="0c6-yL-lZw" firstAttribute="top" secondItem="GUZ-XE-7lU" secondAttribute="top" constant="8" id="eWb-7P-OhA"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="457" y="63.5"/>
+        </customView>
+    </objects>
+</document>

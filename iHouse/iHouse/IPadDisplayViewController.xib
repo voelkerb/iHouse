@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IPadDisplayViewController">
+            <connections>
+                <outlet property="backView" destination="Ky6-Sk-yCZ" id="4hc-m1-Pps"/>
+                <outlet property="deviceImage" destination="790-sk-Zci" id="O3E-dt-Ivb"/>
+                <outlet property="deviceName" destination="Vtq-Ii-P5e" id="0kj-8C-HdF"/>
+                <outlet property="view" destination="3bX-3K-deV" id="GKT-0p-PXR"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="3bX-3K-deV">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="193"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ky6-Sk-yCZ">
+                    <rect key="frame" x="0.0" y="0.0" width="170" height="193"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="790-sk-Zci">
+                            <rect key="frame" x="20" y="20" width="130" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="Qlz-1m-oqv"/>
+                                <constraint firstAttribute="width" secondItem="790-sk-Zci" secondAttribute="height" multiplier="1:1" id="ePU-Ya-Jyq"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="pcN-RK-sWh"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vtq-Ii-P5e">
+                            <rect key="frame" x="20" y="158" width="130" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="AFF-QB-dpF"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SensorView" drawsBackground="YES" id="2GI-mo-wfI">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-Oh-YY1">
+                            <rect key="frame" x="43" y="-7" width="86" height="32"/>
+                            <buttonCell key="cell" type="push" title="identify" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xJ6-Qd-WU2">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="dummy:" target="-2" id="asv-kL-Vj5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="790-sk-Zci" firstAttribute="leading" secondItem="Ky6-Sk-yCZ" secondAttribute="leading" constant="20" id="3HK-dW-54W"/>
+                        <constraint firstItem="790-sk-Zci" firstAttribute="top" secondItem="Vtq-Ii-P5e" secondAttribute="bottom" constant="8" id="9OG-7O-r5x"/>
+                        <constraint firstItem="Vtq-Ii-P5e" firstAttribute="leading" secondItem="Ky6-Sk-yCZ" secondAttribute="leading" constant="20" id="AzT-g1-dZj"/>
+                        <constraint firstAttribute="bottom" secondItem="790-sk-Zci" secondAttribute="bottom" constant="20" id="Mrr-xe-Q1V"/>
+                        <constraint firstAttribute="trailing" secondItem="790-sk-Zci" secondAttribute="trailing" constant="20" id="h11-j8-KgX"/>
+                        <constraint firstItem="790-sk-Zci" firstAttribute="leading" secondItem="Ky6-Sk-yCZ" secondAttribute="leading" constant="20" id="qQP-pv-Qdb"/>
+                        <constraint firstItem="Vtq-Ii-P5e" firstAttribute="top" secondItem="Ky6-Sk-yCZ" secondAttribute="top" constant="18" id="rmR-8o-r7Y"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ky6-Sk-yCZ" secondAttribute="bottom" id="O3Z-qg-wRd"/>
+                <constraint firstItem="Ky6-Sk-yCZ" firstAttribute="top" secondItem="3bX-3K-deV" secondAttribute="top" id="Weg-ez-n1a"/>
+                <constraint firstItem="Ky6-Sk-yCZ" firstAttribute="leading" secondItem="3bX-3K-deV" secondAttribute="leading" id="Y2M-Rs-9VI"/>
+            </constraints>
+            <point key="canvasLocation" x="414" y="740.5"/>
+        </visualEffectView>
+    </objects>
+</document>

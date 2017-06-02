@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="InfraredCommandViewController">
+            <connections>
+                <outlet property="editButton" destination="tc8-46-OoE" id="opM-B8-hNs"/>
+                <outlet property="toggleButton" destination="Sa4-Mr-1EW" id="Q7w-64-Tho"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tc8-46-OoE">
+                    <rect key="frame" x="26" y="-1" width="34" height="17"/>
+                    <buttonCell key="cell" type="inline" title="Edit" bezelStyle="inline" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N3E-dD-FRF">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="editButtonPressed:" target="-2" id="FRD-NO-nA6"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Sa4-Mr-1EW">
+                    <rect key="frame" x="-2" y="-3" width="64" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Sa4-Mr-1EW" secondAttribute="height" multiplier="1:1" id="FTZ-rr-BEO"/>
+                        <constraint firstAttribute="width" constant="60" id="xLF-oo-eKn"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ovp-G1-EP8">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="toggleButtonPressed:" target="-2" id="M8o-lN-mId"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Sa4-Mr-1EW" secondAttribute="bottom" id="Aiy-av-aKz"/>
+                <constraint firstAttribute="trailing" secondItem="Sa4-Mr-1EW" secondAttribute="trailing" id="RTe-0h-YTM"/>
+                <constraint firstItem="Sa4-Mr-1EW" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="XRu-mM-y4e"/>
+                <constraint firstAttribute="bottom" secondItem="tc8-46-OoE" secondAttribute="bottom" id="dLd-Tr-vhs"/>
+                <constraint firstItem="Sa4-Mr-1EW" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="lsc-Pj-pnR"/>
+                <constraint firstAttribute="trailing" secondItem="tc8-46-OoE" secondAttribute="trailing" id="zRx-OL-taV"/>
+            </constraints>
+            <point key="canvasLocation" x="341.5" y="219.5"/>
+        </customView>
+    </objects>
+</document>

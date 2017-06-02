@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="WeatherViewController">
+            <connections>
+                <outlet property="currentConditionLabel" destination="kEq-c0-SuY" id="MDe-tS-iWj"/>
+                <outlet property="currentLocationLabel" destination="bpu-pg-rku" id="K71-5h-geF"/>
+                <outlet property="currentTempLabel" destination="3DA-7m-u8F" id="0Ai-Aa-Fr9"/>
+                <outlet property="currentWeatherImage" destination="oDr-oa-Ybc" id="d9h-2r-XXy"/>
+                <outlet property="forecastView" destination="Fcf-zp-wfY" id="Gih-ka-DI2"/>
+                <outlet property="seperator" destination="nXP-EY-74O" id="TdL-9g-RdU"/>
+                <outlet property="sunriseLabel" destination="zyN-FX-S6k" id="m7y-JY-oXh"/>
+                <outlet property="sunsetLabel" destination="OhY-qw-H5N" id="wv1-Ez-jxb"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OhY-qw-H5N">
+                    <rect key="frame" x="435" y="170" width="59" height="26"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="sunset" id="HKN-uP-pgH">
+                        <font key="font" size="18" name=".SFNSDisplay-Light"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zyN-FX-S6k">
+                    <rect key="frame" x="431" y="196" width="63" height="26"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="sunrise" id="5zf-Mi-ktj">
+                        <font key="font" size="18" name=".SFNSDisplay-Light"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Fcf-zp-wfY" customClass="NSFlippedView">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="150"/>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="nXP-EY-74O">
+                    <rect key="frame" x="0.0" y="149" width="500" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="bAf-wk-eiZ"/>
+                    </constraints>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="V2P-0W-fpT">
+                    <rect key="frame" x="80" y="170" width="420" height="190"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bpu-pg-rku">
+                            <rect key="frame" x="93" y="140" width="253" height="50"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Location" id="hqu-ba-VNZ">
+                                <font key="font" size="35" name=".SFNSDisplay-Light"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-c0-SuY">
+                            <rect key="frame" x="122" y="105" width="195" height="36"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Current Condition" id="kz8-3C-rpJ">
+                                <font key="font" size="25" name=".SFNSDisplay-Light"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-7m-u8F">
+                            <rect key="frame" x="121" y="7" width="196" height="128"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XX°C" id="W2n-dc-wsW">
+                                <font key="font" size="90" name=".SFNSDisplay-Ultralight"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="3DA-7m-u8F" firstAttribute="top" secondItem="bpu-pg-rku" secondAttribute="bottom" constant="5" id="7IP-gc-019"/>
+                        <constraint firstItem="bpu-pg-rku" firstAttribute="centerX" secondItem="V2P-0W-fpT" secondAttribute="centerX" constant="9.5" id="GIe-Vh-uPc"/>
+                        <constraint firstItem="kEq-c0-SuY" firstAttribute="top" secondItem="V2P-0W-fpT" secondAttribute="top" constant="49" id="HH6-NT-kXM"/>
+                        <constraint firstItem="kEq-c0-SuY" firstAttribute="centerX" secondItem="V2P-0W-fpT" secondAttribute="centerX" constant="9.5" id="fSD-Vh-qIh"/>
+                        <constraint firstItem="3DA-7m-u8F" firstAttribute="centerX" secondItem="V2P-0W-fpT" secondAttribute="centerX" constant="9" id="laa-8l-sVk"/>
+                        <constraint firstItem="bpu-pg-rku" firstAttribute="top" secondItem="V2P-0W-fpT" secondAttribute="top" id="vR6-XN-is1"/>
+                    </constraints>
+                </customView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-oa-Ybc">
+                    <rect key="frame" x="20" y="190" width="158" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Zdi-ga-P6c"/>
+                        <constraint firstAttribute="width" secondItem="oDr-oa-Ybc" secondAttribute="height" multiplier="1:1" constant="8" id="w3Y-3w-iwe"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="FaY-dy-KyB"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OhY-qw-H5N" firstAttribute="top" secondItem="zyN-FX-S6k" secondAttribute="bottom" id="3Rz-yO-DUf"/>
+                <constraint firstItem="Fcf-zp-wfY" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="7Xd-Qu-vZz"/>
+                <constraint firstAttribute="trailing" secondItem="Fcf-zp-wfY" secondAttribute="trailing" id="HJk-w2-W1m"/>
+                <constraint firstAttribute="trailing" secondItem="zyN-FX-S6k" secondAttribute="trailing" constant="8" id="HpM-Bh-2ou"/>
+                <constraint firstItem="V2P-0W-fpT" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Ibd-x0-LAG"/>
+                <constraint firstAttribute="trailing" secondItem="OhY-qw-H5N" secondAttribute="trailing" constant="8" id="JAh-zZ-RVo"/>
+                <constraint firstItem="nXP-EY-74O" firstAttribute="top" secondItem="OhY-qw-H5N" secondAttribute="bottom" constant="20" id="JAt-uB-Cfv"/>
+                <constraint firstItem="V2P-0W-fpT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="80" id="NgK-cA-l5P"/>
+                <constraint firstAttribute="trailing" secondItem="V2P-0W-fpT" secondAttribute="trailing" id="PtE-Wt-6ro"/>
+                <constraint firstAttribute="trailing" secondItem="nXP-EY-74O" secondAttribute="trailing" id="XRX-TY-79f"/>
+                <constraint firstAttribute="bottom" secondItem="Fcf-zp-wfY" secondAttribute="bottom" id="YFe-Rz-HpY"/>
+                <constraint firstItem="Fcf-zp-wfY" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="210" id="baR-SC-8Mz"/>
+                <constraint firstItem="nXP-EY-74O" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="210" id="dKh-vO-2uK"/>
+                <constraint firstItem="nXP-EY-74O" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="gij-T1-Mgu"/>
+                <constraint firstItem="oDr-oa-Ybc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="k2e-Ro-8aZ"/>
+                <constraint firstItem="oDr-oa-Ybc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="vtg-Jn-SgR"/>
+                <constraint firstItem="OhY-qw-H5N" firstAttribute="bottom" secondItem="V2P-0W-fpT" secondAttribute="bottom" id="zkK-FY-08Q"/>
+            </constraints>
+            <point key="canvasLocation" x="672" y="495"/>
+        </customView>
+    </objects>
+</document>

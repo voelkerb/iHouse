@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A244d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8152.3"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EditHeatingViewController">
+            <connections>
+                <outlet property="hostLabel" destination="Xgq-9j-0yL" id="YNu-12-XqP"/>
+                <outlet property="view" destination="ZuB-8n-3Xj" id="NJP-sv-10I"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="ZuB-8n-3Xj">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="Advanced Properties:" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="yi2-fi-fQA">
+                    <rect key="frame" x="17" y="-4" width="432" height="89"/>
+                    <view key="contentView" id="iDd-Yh-oZz">
+                        <rect key="frame" x="1" y="1" width="430" height="73"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xgq-9j-0yL">
+                                <rect key="frame" x="120" y="38" width="31" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="host" id="ToT-c4-AXb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="01t-sD-xf1">
+                                <rect key="frame" x="163" y="27" width="85" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="change" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="G0Z-aB-vYv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="changeHeatingHost:" target="-2" id="2aA-32-2iF"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sM4-58-E8U">
+                                <rect key="frame" x="18" y="38" width="86" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Current Host:" id="Dng-F3-T26">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Xgq-9j-0yL" firstAttribute="leading" secondItem="sM4-58-E8U" secondAttribute="trailing" constant="20" id="8m6-iv-Bjl"/>
+                            <constraint firstItem="Xgq-9j-0yL" firstAttribute="top" secondItem="iDd-Yh-oZz" secondAttribute="top" constant="18" id="92A-iS-Ot1"/>
+                            <constraint firstItem="sM4-58-E8U" firstAttribute="leading" secondItem="iDd-Yh-oZz" secondAttribute="leading" constant="20" symbolic="YES" id="Dde-WA-U5O"/>
+                            <constraint firstItem="sM4-58-E8U" firstAttribute="top" secondItem="iDd-Yh-oZz" secondAttribute="top" constant="18" id="Ior-xX-dH2"/>
+                            <constraint firstItem="01t-sD-xf1" firstAttribute="top" secondItem="iDd-Yh-oZz" secondAttribute="top" constant="18" id="bXy-CA-haE"/>
+                            <constraint firstItem="01t-sD-xf1" firstAttribute="leading" secondItem="Xgq-9j-0yL" secondAttribute="trailing" constant="20" id="dHc-ih-CLq"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yi2-fi-fQA" secondAttribute="trailing" constant="20" id="1Di-Zl-YDq"/>
+                <constraint firstItem="yi2-fi-fQA" firstAttribute="top" secondItem="ZuB-8n-3Xj" secondAttribute="top" constant="8" id="Mha-Kj-2AS"/>
+                <constraint firstAttribute="bottom" secondItem="yi2-fi-fQA" secondAttribute="bottom" id="Nah-Oa-710"/>
+                <constraint firstItem="yi2-fi-fQA" firstAttribute="leading" secondItem="ZuB-8n-3Xj" secondAttribute="leading" constant="20" id="yzN-tk-5c9"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="457" y="63.5"/>
+        </customView>
+    </objects>
+</document>

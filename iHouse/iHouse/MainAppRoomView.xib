@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainAppRoomViewController">
+            <connections>
+                <outlet property="scrollView" destination="nRC-va-3PA" id="9MI-d3-bTa"/>
+                <outlet property="view" destination="agy-VN-OP7" id="UER-Tm-ccE"/>
+                <outlet property="viewThatScrolls" destination="ENR-6t-ILp" id="emF-t0-gFG"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="agy-VN-OP7">
+            <rect key="frame" x="0.0" y="0.0" width="720" height="512"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="SCe-dA-wyt">
+                    <rect key="frame" x="0.0" y="0.0" width="720" height="512"/>
+                    <subviews>
+                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRC-va-3PA">
+                            <rect key="frame" x="0.0" y="0.0" width="720" height="512"/>
+                            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Ww4-kK-I5h">
+                                <rect key="frame" x="1" y="1" width="718" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yu5-W1-YaO">
+                                        <rect key="frame" x="159" y="-62" width="29" height="77"/>
+                                    </view>
+                                </subviews>
+                            </clipView>
+                            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="1Xu-bI-IEP">
+                                <rect key="frame" x="1" y="495" width="718" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7ug-MG-DpD">
+                                <rect key="frame" x="703" y="1" width="16" height="510"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nRC-va-3PA" secondAttribute="trailing" id="1aa-63-31U"/>
+                        <constraint firstItem="nRC-va-3PA" firstAttribute="leading" secondItem="SCe-dA-wyt" secondAttribute="leading" id="JW5-S1-caN"/>
+                        <constraint firstItem="nRC-va-3PA" firstAttribute="top" secondItem="SCe-dA-wyt" secondAttribute="top" id="sWE-GC-Oyq"/>
+                        <constraint firstAttribute="bottom" secondItem="nRC-va-3PA" secondAttribute="bottom" id="wEI-af-BlD"/>
+                    </constraints>
+                </visualEffectView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SCe-dA-wyt" secondAttribute="trailing" id="Ksx-e1-yDF"/>
+                <constraint firstAttribute="bottom" secondItem="SCe-dA-wyt" secondAttribute="bottom" id="M7C-gd-cgs"/>
+                <constraint firstItem="SCe-dA-wyt" firstAttribute="leading" secondItem="agy-VN-OP7" secondAttribute="leading" id="Rm2-M1-A1x"/>
+                <constraint firstItem="SCe-dA-wyt" firstAttribute="top" secondItem="agy-VN-OP7" secondAttribute="top" id="clC-hM-VxO"/>
+            </constraints>
+            <point key="canvasLocation" x="947" y="569"/>
+        </customView>
+        <customView id="ENR-6t-ILp" customClass="NSFlippedView">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="285"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="780" y="161.5"/>
+        </customView>
+    </objects>
+</document>
