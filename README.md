@@ -6,10 +6,10 @@ Speech recognition in smart home systems has become popular in both, research an
 
 # Why is not every home smart (yet)?
 This has - at least in my opinion - 4 major reasons:
-1. Missing compatibility between existing products <img src="https://github.com/voelkerb/iHouse/blob/master/docu/Compatibility.jpg" width="100">
-2. Security <img src="https://github.com/voelkerb/iHouse/blob/master/docu/Security.jpg" width="100">
-3. Retrospective use and affordability <img src="https://github.com/voelkerb/iHouse/blob/master/docu/Retrospectivity.jpg" width="100">
-4. Flexibility and ease of use <img src="https://github.com/voelkerb/iHouse/blob/master/docu/Flexibility.jpg" width="100">
+<img src="https://github.com/voelkerb/iHouse/blob/master/docu/Compatibility.jpg" width="100"> 1. Missing compatibility between existing products 
+<img src="https://github.com/voelkerb/iHouse/blob/master/docu/Security.jpg" width="100"> 2. Security 
+<img src="https://github.com/voelkerb/iHouse/blob/master/docu/Retrospectivity.jpg" width="100"> 3. Retrospective use and affordability 
+<img src="https://github.com/voelkerb/iHouse/blob/master/docu/Flexibility.jpg" width="100"> 4. Flexibility and ease of use 
 
 
 # System Overview
