@@ -23,3 +23,10 @@ The environment of a Smart Home is distributed by its nature, you have several r
 
 The overall flow of complete setup is shown below. The smartphone interface is enabled using a TCP connection. Off-the-shelf sensors and actuators which feature TCP interfaces can also be integrated easily. To allow the use of existing equipment like the lighting or gerneric devices with a power plug a TCP to RF Bridge modules is used which switches off-the-shelf power sockets (unexpensive). A TCP to infrared bridge is used to control any devices that is shipped with a remote control (TV, Hifi System, etc.).
 ![alt text](https://github.com/voelkerb/iHouse/blob/master/docu/BasicSystem.jpg)
+
+
+# Screenshots
+
+![alt text](https://github.com/voelkerb/iHouse/blob/master/docu/iHouse5.jpg)
+![alt text](https://github.com/voelkerb/iHouse/blob/master/docu/RemoteApp.png)
+
