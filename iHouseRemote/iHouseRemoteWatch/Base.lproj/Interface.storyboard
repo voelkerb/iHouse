@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n8H-sL-H9J">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--iHouse-->
+        <scene sceneID="y2g-zp-P9K">
+            <objects>
+                <controller identifier="Rooms" title="iHouse" id="M55-w0-XgY" customClass="HouseInterfaceController">
+                    <items>
+                        <group alignment="left" radius="6" spacing="6" id="grS-ub-ZWa">
+                            <color key="backgroundColor" red="0.97670762519999998" green="0.98968728120000005" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <table alignment="left" id="mVm-gc-Hui">
+                            <items>
+                                <tableRow identifier="roomRowType" id="2Sd-60-rHC" customClass="RoomRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="5Cp-j0-OVI">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="Tfv-Fo-f3G">
+                                                <color key="color" red="1" green="0.14980220080000001" blue="0.01003296912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </separator>
+                                            <group alignment="left" spacing="2" id="Luh-UY-OAD">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" image="house_256" id="L94-sA-Weg"/>
+                                                    <label alignment="left" verticalAlignment="center" text="LivingRoom" numberOfLines="2" id="gpc-3L-Oxp">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="roomImage" destination="L94-sA-Weg" id="6KS-qT-wDc"/>
+                                        <outlet property="roomName" destination="gpc-3L-Oxp" id="zWp-kh-AVM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="roomsTable" destination="mVm-gc-Hui" id="geI-WA-0BX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="74" y="178"/>
+        </scene>
+        <!--Room-->
+        <scene sceneID="pFj-33-MG8">
+            <objects>
+                <controller identifier="Devices" title="Room" id="pCW-Gk-631" customClass="RoomInterfaceController">
+                    <items>
+                        <group alignment="left" radius="6" spacing="6" id="ujH-O3-BY0">
+                            <color key="backgroundColor" red="0.97670762519999998" green="0.98968728120000005" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <table alignment="left" id="1Sk-rD-2hA">
+                            <items>
+                                <tableRow identifier="deviceRowType" id="pEV-Fs-AFe" customClass="DeviceRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="mNE-u7-XwR">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="O2N-nV-BoE">
+                                                <color key="color" red="1" green="0.14980220080000001" blue="0.01003296912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </separator>
+                                            <group alignment="left" spacing="2" id="3lJ-lw-Xed">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" image="devices_256" id="yDa-Hs-Ipf"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Light" numberOfLines="2" id="Jag-xE-KfD">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="deviceImage" destination="yDa-Hs-Ipf" id="Dp9-Fz-mXx"/>
+                                        <outlet property="deviceName" destination="Jag-xE-KfD" id="xcW-SO-6M0"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="devicesTable" destination="1Sk-rD-2hA" id="Ohw-g5-pjm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="308" y="178"/>
+        </scene>
+        <!--Conn-->
+        <scene sceneID="5Pd-qt-Ph9">
+            <objects>
+                <controller identifier="Connection" title="Conn" id="n8H-sL-H9J" customClass="ConnectionInterfaceController">
+                    <items>
+                        <group width="106" height="106" alignment="center" verticalAlignment="center" backgroundImage="Progress" contentMode="center" id="Beh-rP-Rhp">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" id="dTN-jB-DQb">
+                                    <group key="contentGroup" width="78" height="78" alignment="left" radius="39" id="lXD-mP-RTC">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Connect" id="sBh-7c-jxW">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="1" green="0.14980220080000001" blue="0.01003296912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="connectPressed" destination="n8H-sL-H9J" id="FDZ-Hc-B3Q"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="connectButton" destination="dTN-jB-DQb" id="dep-nf-f1k"/>
+                        <outlet property="indicator" destination="Beh-rP-Rhp" id="Ehu-f9-4Dk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="594" y="108"/>
+        </scene>
+        <!--Remote-->
+        <scene sceneID="rHj-be-U53">
+            <objects>
+                <controller identifier="IRRemote" title="Remote" id="nwF-2S-N4P" customClass="IRRemoteInterfaceController">
+                    <items>
+                        <group alignment="left" radius="6" spacing="6" id="bzA-kC-CpU">
+                            <color key="backgroundColor" red="0.97670762519999998" green="0.98968728120000005" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <table alignment="left" id="HC4-lb-DgK">
+                            <items>
+                                <tableRow identifier="irDeviceRowType" id="oAB-BC-2iG" customClass="IRRemoteRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="2" id="SdX-Og-hT6">
+                                        <items>
+                                            <group height="0.0" alignment="left" radius="6" spacing="6" id="50a-XS-OvX">
+                                                <items>
+                                                    <button width="42" height="42" alignment="left" backgroundImage="devices_256" id="eDg-tf-UvG">
+                                                        <color key="titleColor" red="1" green="0.16858728980000001" blue="0.14620331410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="leftButtonTapped" destination="oAB-BC-2iG" id="R3F-dm-yob"/>
+                                                        </connections>
+                                                    </button>
+                                                </items>
+                                                <color key="backgroundColor" red="0.97670762523437715" green="0.98968728120525917" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <group height="0.0" alignment="left" radius="6" spacing="6" id="6KU-tv-nMJ">
+                                                <items>
+                                                    <button width="42" height="42" alignment="left" backgroundImage="devices_256" id="Zis-gZ-R4D">
+                                                        <connections>
+                                                            <action selector="middleButtonTapped" destination="oAB-BC-2iG" id="cwz-tX-oWa"/>
+                                                        </connections>
+                                                    </button>
+                                                </items>
+                                                <color key="backgroundColor" red="0.97670762523437715" green="0.98968728120525917" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <group height="0.0" alignment="left" radius="6" spacing="2" id="gdb-gW-vCs">
+                                                <items>
+                                                    <button width="42" height="42" alignment="left" backgroundImage="devices_256" id="Bo3-aV-Ucb">
+                                                        <connections>
+                                                            <action selector="rightButtonTapped" destination="oAB-BC-2iG" id="7Fs-UZ-Ehk"/>
+                                                        </connections>
+                                                    </button>
+                                                </items>
+                                                <color key="backgroundColor" red="0.97670762523437715" green="0.98968728120525917" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <edgeInsets key="margins" left="2" right="2" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="leftButton" destination="eDg-tf-UvG" id="2Rb-UM-1Il"/>
+                                        <outlet property="middleButton" destination="Zis-gZ-R4D" id="bKQ-PP-CUI"/>
+                                        <outlet property="rightButton" destination="Bo3-aV-Ucb" id="Lnb-9X-Mjv"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="irCommandsTable" destination="HC4-lb-DgK" id="tdd-lx-rKb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="652" y="412"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="HkP-TF-2Zh">
+            <objects>
+                <controller identifier="Groups" title="Groups" id="R2t-wF-YGN" customClass="GroupInterfaceController">
+                    <items>
+                        <group alignment="left" radius="6" spacing="6" id="9I5-8x-FbC">
+                            <color key="backgroundColor" red="0.97670762519999998" green="0.98968728120000005" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <table alignment="left" id="aDQ-ZI-jrM">
+                            <items>
+                                <tableRow identifier="groupRowType" id="eBF-Ui-Y0W" customClass="GroupRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="SKW-Pi-zut">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="ejP-pI-ueN">
+                                                <color key="color" red="1" green="0.14980220080000001" blue="0.01003296912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </separator>
+                                            <group alignment="left" spacing="2" id="4Ba-bC-0Pt">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" image="devices_256" id="byW-TE-9H6"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Light" numberOfLines="2" id="5JN-uw-Wcv">
+                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="groupImage" destination="byW-TE-9H6" id="bZq-Cn-wQt"/>
+                                        <outlet property="groupName" destination="5JN-uw-Wcv" id="eII-9Z-9r1"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="groupsTable" destination="aDQ-ZI-jrM" id="jWU-nP-v58"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="364" y="467"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.14980220080000001" blue="0.01003296912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
